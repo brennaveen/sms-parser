@@ -1,0 +1,40 @@
+{
+    "name": "sms-parser",
+    "version": "1.0.0",
+    "description": "Node application for exporting SMS Backup & Restore backup files into a csv for easy viewing and printing",
+    "main": "main.js",
+    "scripts": {
+        "postinstall": "node setup.js",
+        "import": "node main.js",
+        "export": "node export.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/brennaveen/sms-parser.git"
+    },
+    "keywords": [
+        "sms",
+        "sms backup & sync"
+    ],
+    "author": "Brenna Veen <blcveen@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/brennaveen/sms-parser/issues"
+    },
+    "homepage": "https://github.com/brennaveen/sms-parser#readme",
+    "dependencies": {
+        "fs": "0.0.1-security",
+        "sqlite3": "^4.0.4",
+        "xml2js": "^0.4.19"
+    },
+    "sms_parser": {
+        "contactNames": [],
+        "path": {
+            "database": "./database",
+            "archive": "./archive",
+            "import": "./import",
+            "export": "./export"
+        }
+    }
+}
